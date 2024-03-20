@@ -19,8 +19,6 @@ jobs:
         dotnet-version: 8.0.x
     - name: Install appcat
       run: dotnet tool install -g dotnet-appcat
-    - name: Configure telemetry permissions
-      run: set DOTNET_UPGRADEASSISTANT_TELEMETRY_OPTOUT="1"
     - name: Run appcat JSON
       run: appcat analyze "./app" --source folder --report appcat-results/reports --serializer json --non-interactive --code --binaries --target AppService.Linux
     - name: Run appcat HTML
