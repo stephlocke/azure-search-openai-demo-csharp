@@ -26,6 +26,6 @@ jobs:
     - name: Upload results
       uses: actions/upload-artifact@v4
       with:
-        path: appcat-results
+        path: appcat-results/
 
 
