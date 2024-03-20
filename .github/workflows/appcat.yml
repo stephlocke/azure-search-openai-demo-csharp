@@ -20,4 +20,4 @@ jobs:
     - name: Install appcat
       run: dotnet tool install -g dotnet-appcat
     - name: Run appcat
-      run: appcat analyze ./app --report appcat-results --serializer json --noninteractive --code --binaries --target AppService.Linux
+      run: appcat analyze ./app --report appcat-results --serializer json --non-interactive --code --binaries --target AppService.Linux
