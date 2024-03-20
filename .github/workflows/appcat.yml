@@ -6,6 +6,8 @@ on:
     branches: [ "main" ]
 env:
   DOTNET_APPCAT_TELEMETRY_OPTOUT: ${{vars.DOTNET_APPCAT_TELEMETRY_OPTOUT}}
+  DOTNET_NOLOGO: ${{vars.DOTNET_NOLOGO}}
+  DOTNET_CLI_TELEMETRY_OPTOUT: ${{vars.DOTNET_CLI_TELEMETRY_OPTOUT}}
 jobs:
   assess:
 
