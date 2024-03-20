@@ -1,5 +1,4 @@
 name: assess modernisation effort
-
 on:
   push:
     branches: [ "main" ]
@@ -10,6 +9,7 @@ jobs:
   assess:
 
     runs-on: ubuntu-latest
+    environment: Default
 
     steps:
     - uses: actions/checkout@v3
