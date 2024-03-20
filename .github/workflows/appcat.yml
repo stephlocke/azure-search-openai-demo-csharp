@@ -19,11 +19,13 @@ jobs:
         dotnet-version: 8.0.x
     - name: Install appcat
       run: dotnet tool install -g dotnet-appcat
-    - name: Run appcat
-      run: appcat analyze "./app" --source folder --report appcat-results --serializer json --non-interactive --code --binaries --target AppService.Linux
+    - name: Run appcat JSON
+      run: appcat analyze "./app" --source folder --report appcat-results/reports --serializer json --non-interactive --code --binaries --target AppService.Linux
+    - name: Run appcat HTML
+      run: appcat analyze "./app" --source folder --report appcat-results/reports/html --serializer html --non-interactive --code --binaries --target AppService.Linux
     - name: Upload results
       uses: actions/upload-artifact@v4
       with:
-        path: appcat-results*
+        path: appcat-results
 
 
